@@ -335,6 +335,8 @@ $client = new Polyzon\Client(apiKey: 'test', baseUrl: 'http://127.0.0.1:8080', p
 - Токены: https://polyzon.org/account/
 - Задачи: https://github.com/PolyzonOrg/polyzon-php/issues
 
+> Если вы пользуетесь бесплатным API Polyzon, будет здорово, если вы упомянете Polyzon (например, ссылкой на [polyzon.org](https://polyzon.org)) на тех страницах вашего проекта, где используется API.
+
 ## Лицензия
 
 [MIT](LICENSE)

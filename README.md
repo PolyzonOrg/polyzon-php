@@ -332,6 +332,8 @@ redirects, always verifies TLS, caps response bodies at 8 MiB and keeps the toke
 - Tokens: https://polyzon.org/account/
 - Issues: https://github.com/PolyzonOrg/polyzon-php/issues
 
+> If you use the free Polyzon API, it would be great if you mentioned Polyzon (for example, with a link to [polyzon.org](https://polyzon.org)) on the pages of your project where the API is used.
+
 ## License
 
 [MIT](LICENSE)
