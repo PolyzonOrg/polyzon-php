@@ -1,0 +1,73 @@
+{
+    "name": "polyzon/polyzon-php",
+    "description": "Official PHP SDK for the Polyzon public API: search 3D models across Thingiverse, Printables, MakerWorld, Cults3D and more.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "polyzon",
+        "3d-models",
+        "3d-printing",
+        "stl",
+        "thingiverse",
+        "printables",
+        "makerworld",
+        "search",
+        "api",
+        "sdk"
+    ],
+    "homepage": "https://api.polyzon.org",
+    "authors": [
+        {
+            "name": "Polyzon",
+            "homepage": "https://polyzon.org"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/PolyzonOrg/polyzon-php/issues",
+        "source": "https://github.com/PolyzonOrg/polyzon-php",
+        "docs": "https://api.polyzon.org",
+        "security": "https://github.com/PolyzonOrg/polyzon-php/blob/main/SECURITY.md"
+    },
+    "require": {
+        "php": "^8.2",
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "~3.95.27",
+        "phpstan/phpstan": "~2.3.1",
+        "phpstan/phpstan-strict-rules": "~2.1.0",
+        "phpunit/phpunit": "~11.5.57"
+    },
+    "autoload": {
+        "psr-4": {
+            "Polyzon\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Polyzon\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "phpunit",
+        "coverage": [
+            "@putenv XDEBUG_MODE=coverage",
+            "phpunit --coverage-text --coverage-clover=build/coverage.xml",
+            "@php tests/coverage-check.php build/coverage.xml 90"
+        ],
+        "analyse": "phpstan analyse --no-progress",
+        "cs": "php-cs-fixer check --diff",
+        "cs:fix": "php-cs-fixer fix"
+    },
+    "scripts-descriptions": {
+        "test": "Run the test suite.",
+        "coverage": "Run the test suite with line coverage (needs pcov or Xdebug); fails below 90 %.",
+        "analyse": "Run PHPStan at level max.",
+        "cs": "Check the code style (PER-CS 2.0).",
+        "cs:fix": "Fix the code style."
+    }
+}
